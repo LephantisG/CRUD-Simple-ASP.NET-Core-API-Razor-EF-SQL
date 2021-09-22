@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kameh\\Desktop\\Tareas\\Proyectos de Visual Studio\\CRUD ASP.NET SQL EF Razor\\WebAPI Razor\\WebAPI Razor\\WebAPI Razor.csproj": {}
+    "C:\\Users\\Administrator\\Documents\\Proyectos de visual studio\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\WebAPI Razor\\WebAPI Razor\\WebAPI Razor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kameh\\Desktop\\Tareas\\Proyectos de Visual Studio\\CRUD ASP.NET SQL EF Razor\\WebAPI Razor\\WebAPI Razor\\WebAPI Razor.csproj": {
+    "C:\\Users\\Administrator\\Documents\\Proyectos de visual studio\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\WebAPI Razor\\WebAPI Razor\\WebAPI Razor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kameh\\Desktop\\Tareas\\Proyectos de Visual Studio\\CRUD ASP.NET SQL EF Razor\\WebAPI Razor\\WebAPI Razor\\WebAPI Razor.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\Proyectos de visual studio\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\WebAPI Razor\\WebAPI Razor\\WebAPI Razor.csproj",
         "projectName": "WebAPI Razor",
-        "projectPath": "C:\\Users\\kameh\\Desktop\\Tareas\\Proyectos de Visual Studio\\CRUD ASP.NET SQL EF Razor\\WebAPI Razor\\WebAPI Razor\\WebAPI Razor.csproj",
-        "packagesPath": "C:\\Users\\kameh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kameh\\Desktop\\Tareas\\Proyectos de Visual Studio\\CRUD ASP.NET SQL EF Razor\\WebAPI Razor\\WebAPI Razor\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\Proyectos de visual studio\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\WebAPI Razor\\WebAPI Razor\\WebAPI Razor.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Documents\\Proyectos de visual studio\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\\WebAPI Razor\\WebAPI Razor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kameh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -65,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
