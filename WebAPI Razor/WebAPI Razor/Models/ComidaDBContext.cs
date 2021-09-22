@@ -13,7 +13,7 @@ namespace WebAPI_Razor.Models
         public DbSet<ComidaModel> Comidas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-4CF079O\sqlexpress;Initial Catalog=CrudComidaDB;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=LEPHANTIS\SERVERGABRIEL;Initial Catalog=CRUDRazorDB;Integrated Security=True");
         }
     }
 }
