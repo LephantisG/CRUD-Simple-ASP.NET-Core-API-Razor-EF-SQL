@@ -7,5 +7,8 @@ namespace WebAPI_Razor.Models.Request.Comida
 {
     public class ComidaRequest
     {
+        public string Nombre { get; set; }
+        public int Calorias { get; set; }
+        public int TipoComidaId { get; set; }
     }
 }

@@ -7,5 +7,7 @@ namespace WebAPI_Razor.Models.Request.TipoComida
 {
     public class TipoComidaRequest
     {
+        public string Tipo { get; set; }
+        public string Color { get; set; }
     }
 }

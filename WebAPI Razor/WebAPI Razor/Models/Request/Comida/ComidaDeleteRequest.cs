@@ -7,5 +7,7 @@ namespace WebAPI_Razor.Models.Request.Comida
 {
     public class ComidaDeleteRequest
     {
+        public int ComidaId { get; set; }
+
     }
 }

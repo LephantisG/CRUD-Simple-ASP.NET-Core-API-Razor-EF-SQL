@@ -7,5 +7,8 @@ namespace WebAPI_Razor.Models.Request.Persona
 {
     public class PersonaRequest
     {
+        public string Nombre { get; set; }
+        public int Puntaje { get; set; }
+        public int ComidaId { get; set; }
     }
 }

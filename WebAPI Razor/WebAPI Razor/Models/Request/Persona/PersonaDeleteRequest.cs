@@ -7,5 +7,6 @@ namespace WebAPI_Razor.Models.Request.Persona
 {
     public class PersonaDeleteRequest
     {
+        public int PersonaId { get; set; }
     }
 }
