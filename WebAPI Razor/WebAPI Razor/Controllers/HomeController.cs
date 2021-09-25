@@ -23,7 +23,17 @@ namespace WebAPI_Razor.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult TipoComida()
+        {
+            return View();
+        }
+
+        public IActionResult Comida()
+        {
+            return View();
+        }
+
+        public IActionResult Persona()
         {
             return View();
         }

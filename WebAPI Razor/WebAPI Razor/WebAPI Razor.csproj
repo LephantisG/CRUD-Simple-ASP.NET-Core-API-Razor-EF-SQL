@@ -6,6 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Comida\**" />
+    <Compile Remove="Views\Persona\**" />
+    <Compile Remove="Views\TipoComida\**" />
+    <Content Remove="Views\Comida\**" />
+    <Content Remove="Views\Persona\**" />
+    <Content Remove="Views\TipoComida\**" />
+    <EmbeddedResource Remove="Views\Comida\**" />
+    <EmbeddedResource Remove="Views\Persona\**" />
+    <EmbeddedResource Remove="Views\TipoComida\**" />
+    <None Remove="Views\Comida\**" />
+    <None Remove="Views\Persona\**" />
+    <None Remove="Views\TipoComida\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
       <PrivateAssets>all</PrivateAssets>
@@ -17,12 +32,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Comida\" />
-    <Folder Include="Views\Persona\" />
-    <Folder Include="Views\TipoComida\" />
   </ItemGroup>
 
 </Project>
