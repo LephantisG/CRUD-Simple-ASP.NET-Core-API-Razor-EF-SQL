@@ -8,16 +8,12 @@
   <ItemGroup>
     <Compile Remove="Views\Comida\**" />
     <Compile Remove="Views\Persona\**" />
-    <Compile Remove="Views\TipoComida\**" />
     <Content Remove="Views\Comida\**" />
     <Content Remove="Views\Persona\**" />
-    <Content Remove="Views\TipoComida\**" />
     <EmbeddedResource Remove="Views\Comida\**" />
     <EmbeddedResource Remove="Views\Persona\**" />
-    <EmbeddedResource Remove="Views\TipoComida\**" />
     <None Remove="Views\Comida\**" />
     <None Remove="Views\Persona\**" />
-    <None Remove="Views\TipoComida\**" />
   </ItemGroup>
 
   <ItemGroup>
