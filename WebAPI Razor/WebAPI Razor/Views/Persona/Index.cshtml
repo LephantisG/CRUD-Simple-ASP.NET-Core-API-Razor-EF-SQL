@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Personas";
+}
+
+@model IEnumerable<WebAPI_Razor.Models.PersonaModel>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Lista de personas</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puntaje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComidaId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var oPersona in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => oPersona.PersonaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => oPersona.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => oPersona.Puntaje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => oPersona.ComidaId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { oPersona.PersonaId }) |
+                    @Html.ActionLink("Details", "Details", new { oPersona.PersonaId }) |
+                    @Html.ActionLink("Delete", "Delete", new { oPersona.PersonaId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

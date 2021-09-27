@@ -1,0 +1,54 @@
+﻿@{
+    string Url = @"https://localhost:48125/api/Comida";
+    ViewData["Title"] = "Comida";
+}
+
+@model IEnumerable<WebAPI_Razor.Models.ComidaModel>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Lista de alimentos</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ComidaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calorias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoComidaId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var oComida in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => oComida.ComidaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => oComida.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => oComida.Calorias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => oComida.TipoComidaId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { oComida.ComidaId }) |
+                    @Html.ActionLink("Details", "Details", new { oComida.ComidaId }) |
+                    @Html.ActionLink("Delete", "Delete", new { oComida.ComidaId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -10,12 +10,19 @@ namespace WebAPI_Razor.Controllers
     [ApiController]
     public class ComidaController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         [HttpGet]
+        public ActionResult Index()
+        {
+            IEnumerable<Models.ComidaModel> lista;
+            using (Models.ComidaDBContext db = new Models.ComidaDBContext())
+            {
+                lista = (from p in db.Comidas select p).ToList();
+            }
+            return View(lista);
+        }
+
+        [HttpGet("json")]
         public ActionResult Get()
         {
             using (Models.ComidaDBContext db = new Models.ComidaDBContext())

@@ -307,3 +307,6 @@ C:\Users\kameh\Desktop\Tareas\Proyectos de Visual Studio\CRUD ASP.NET SQL EF Raz
 C:\Users\kameh\Desktop\Tareas\Proyectos de Visual Studio\CRUD ASP.NET SQL EF Razor\WebAPI Razor\WebAPI Razor\obj\Debug\netcoreapp3.1\Razor\Views\Home\Persona.cshtml.g.cs
 C:\Users\kameh\Desktop\Tareas\Proyectos de Visual Studio\CRUD ASP.NET SQL EF Razor\WebAPI Razor\WebAPI Razor\obj\Debug\netcoreapp3.1\Razor\Views\Home\View.cshtml.g.cs
 C:\Users\kameh\Desktop\Tareas\Proyectos de Visual Studio\CRUD ASP.NET SQL EF Razor\WebAPI Razor\WebAPI Razor\obj\Debug\netcoreapp3.1\Razor\Views\TipoComida\Index.cshtml.g.cs
+C:\Users\Administrator\Documents\Proyectos de visual studio\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\WebAPI Razor\WebAPI Razor\obj\Debug\netcoreapp3.1\Razor\Views\Home\View.cshtml.g.cs
+C:\Users\Administrator\Documents\Proyectos de visual studio\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\WebAPI Razor\WebAPI Razor\obj\Debug\netcoreapp3.1\Razor\Views\Persona\Index.cshtml.g.cs
+C:\Users\Administrator\Documents\Proyectos de visual studio\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\CRUD-Simple-ASP.NET-Core-API-Razor-EF-SQL\WebAPI Razor\WebAPI Razor\obj\Debug\netcoreapp3.1\Razor\Views\TipoComida\Index.cshtml.g.cs

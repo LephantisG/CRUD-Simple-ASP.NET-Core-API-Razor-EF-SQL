@@ -1,5 +1,4 @@
 ﻿@{
-    string Url = @"https://localhost:48125/api/TipoComida";
     ViewData["Title"] = "Tipo de Comida";
 }
 
@@ -9,6 +8,43 @@
 
 <p>Lista de tipos de alimentos</p>
 
-<div class="form-group">
-    
-</div>
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoComidaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var oTipoComida in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => oTipoComida.TipoComidaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => oTipoComida.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => oTipoComida.Color)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { oTipoComida.TipoComidaId }) |
+                    @Html.ActionLink("Details", "Details", new { oTipoComida.TipoComidaId }) |
+                    @Html.ActionLink("Delete", "Delete", new { oTipoComida.TipoComidaId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

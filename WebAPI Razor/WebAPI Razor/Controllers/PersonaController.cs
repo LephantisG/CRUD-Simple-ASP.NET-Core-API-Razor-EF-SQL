@@ -10,12 +10,18 @@ namespace WebAPI_Razor.Controllers
     [ApiController]
     public class PersonaController : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public ActionResult Index()
         {
-            return View();
+            IEnumerable<Models.PersonaModel> lista;
+            using (Models.ComidaDBContext db = new Models.ComidaDBContext())
+            {
+                lista = (from p in db.Personas select p).ToList();
+            }
+            return View(lista);
         }
 
-        [HttpGet]
+        [HttpGet("json")]
         public ActionResult Get()
         {
             using (Models.ComidaDBContext db = new Models.ComidaDBContext())
