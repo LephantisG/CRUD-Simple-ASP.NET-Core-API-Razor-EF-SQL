@@ -40,8 +40,7 @@
                     @Html.DisplayFor(modelItem => oTipoComida.Color)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { oTipoComida.TipoComidaId }) |
-                    @Html.ActionLink("Details", "Details", new { oTipoComida.TipoComidaId }) |
+                    @Html.ActionLink("Edit", "Edit", "TipoComida", new { id = oTipoComida.TipoComidaId}) |
                     @Html.ActionLink("Delete", "Delete", new { oTipoComida.TipoComidaId })
                 </td>
             </tr>

@@ -12,62 +12,67 @@ namespace WebAPI_Razor.Controllers
     {
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(Models.ComidaDBContext db)
         {
             IEnumerable<Models.TipoComidaModel> lista;
-            using (Models.ComidaDBContext db = new Models.ComidaDBContext())
-            {
-                lista = (from p in db.TipoComidas select p).ToList();
-            }
+            lista = (from p in db.TipoComidas select p).ToList();
             return View(lista);
         }
 
         [HttpGet("json")]
-        public ActionResult GetJson()
+        public ActionResult GetJson(Models.ComidaDBContext db)
         {
-            using (Models.ComidaDBContext db = new Models.ComidaDBContext())
-            {
-                var lista = (from p in db.TipoComidas select p).ToList();
-                return Ok(lista);
-            }
+            var lista = (from p in db.TipoComidas select p).ToList();
+            return Ok(lista);
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] Models.Request.TipoComida.TipoComidaRequest tipoComidaRequest)
+        public ActionResult Create([FromBody] Models.Request.TipoComida.TipoComidaRequest tipoComidaRequest, Models.ComidaDBContext db)
         {
-            using (Models.ComidaDBContext db = new Models.ComidaDBContext())
-            {
-                Models.TipoComidaModel oTipoComidaModel = new Models.TipoComidaModel();
-                oTipoComidaModel.Tipo = tipoComidaRequest.Tipo;
-                oTipoComidaModel.Color = tipoComidaRequest.Color;
-                db.TipoComidas.Add(oTipoComidaModel);
-                db.SaveChanges();
-            }
+            Models.TipoComidaModel oTipoComidaModel = new Models.TipoComidaModel();
+            oTipoComidaModel.Tipo = tipoComidaRequest.Tipo;
+            oTipoComidaModel.Color = tipoComidaRequest.Color;
+            db.TipoComidas.Add(oTipoComidaModel);
+            db.SaveChanges();
             return Ok();
         }
 
-        [HttpPut]
-        public ActionResult Put([FromBody] Models.Request.TipoComida.TipoComidaEditRequest tipoComidaRequest)
+        [HttpPost("json")]
+        public ActionResult Post([FromBody] Models.Request.TipoComida.TipoComidaRequest tipoComidaRequest, Models.ComidaDBContext db)
         {
-            using (Models.ComidaDBContext db = new Models.ComidaDBContext())
-            {
-                Models.TipoComidaModel oTipoComidaModel = db.TipoComidas.Find(tipoComidaRequest.TipoComidaId);
-                oTipoComidaModel.Tipo = tipoComidaRequest.Tipo;
-                oTipoComidaModel.Color = tipoComidaRequest.Color;
-                db.Entry(oTipoComidaModel).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                db.SaveChanges();
-            }
+            Models.TipoComidaModel oTipoComidaModel = new Models.TipoComidaModel();
+            oTipoComidaModel.Tipo = tipoComidaRequest.Tipo;
+            oTipoComidaModel.Color = tipoComidaRequest.Color;
+            db.TipoComidas.Add(oTipoComidaModel);
+            db.SaveChanges();
+            return Ok();
+        }
+
+        [HttpGet("Edit/{id}")]
+        public ActionResult Edit([FromRoute]int id, Models.ComidaDBContext db)
+        {
+            Models.TipoComidaModel oTipoComidaModel = db.TipoComidas.Find(id);
+            return View(oTipoComidaModel);
+        }
+
+        [HttpPut("Edit")]
+        public ActionResult Put(Models.TipoComidaModel oModel, Models.ComidaDBContext db)
+        {
+            //Models.Request.TipoComida.TipoComidaDeleteRequest tempTipoComidaModel = new Models.Request.TipoComida.TipoComidaDeleteRequest();
+            //tempTipoComidaModel.TipoComidaId = (int)TempData["tempTipoComidaId"];
+            Models.TipoComidaModel oTipoComidaModel = db.TipoComidas.Find(oModel.TipoComidaId);
+            oTipoComidaModel.Tipo = oModel.Tipo;
+            oTipoComidaModel.Color = oModel.Color;
+            db.Entry(oTipoComidaModel).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            db.SaveChanges();
             return Ok();
         }
         [HttpDelete]
-        public ActionResult Delete([FromBody] Models.Request.TipoComida.TipoComidaDeleteRequest tipoComidaRequest)
+        public ActionResult Delete([FromBody] Models.Request.TipoComida.TipoComidaDeleteRequest tipoComidaRequest, Models.ComidaDBContext db)
         {
-            using(Models.ComidaDBContext db = new Models.ComidaDBContext())
-            {
-                Models.TipoComidaModel oTipoComidaModel = db.TipoComidas.Find(tipoComidaRequest.TipoComidaId);
-                db.TipoComidas.Remove(oTipoComidaModel);
-                db.SaveChanges();
-            }
+            Models.TipoComidaModel oTipoComidaModel = db.TipoComidas.Find(tipoComidaRequest.TipoComidaId);
+            db.TipoComidas.Remove(oTipoComidaModel);
+            db.SaveChanges();
             return Ok();
         }
     }
